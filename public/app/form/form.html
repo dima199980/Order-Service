@@ -1,0 +1,178 @@
+<div class="form">
+    <div class="modalForm" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row justify-content-center">
+                        <div class="branding"><h2>ЗАЯВКА НА ОЦЕНКУ ИМУЩЕСТВА</h2></div>
+                        <h5>Поля для обязательного заполнения отмечены *</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger alert-errOper" role="alert" ng-show="errPost">
+                        {{errPost}}
+                    </div>
+                    <h4 class="mb-3">ВЫБЕРИТЕ КАТЕГОРИЮ ДЛЯ РЕАЛИЗАЦИИ</h4>
+                    <div class="row">
+                        <div class="col-md-12 order-md-1">
+                            <form class="needs-validation" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <select class="custom-select d-block w-100" id="category"
+                                                ng-model="categoryModel" required>
+                                            <option value="">Выберите категорию...</option>
+                                            <option>Транспорт и спецтехника</option>
+                                            <option>Недвижимость</option>
+                                            <option>Антиквариат</option>
+                                            <option>Мебель и бытовая оргтехника</option>
+                                            <option>Материалы, инвентарь запчасти</option>
+                                            <option>Бизнес</option>
+                                            <option>Дебиторская задолженность</option>
+                                            <option>Все категории</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Пожалуйста выберите категорию.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="mb-4 bg-dark">
+
+                                <h4 class="mb-3">ЛИЧНЫЕ ДАННЫЕ</h4>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control" id="firstName"
+                                               placeholder="Ваше имя *" ng-model="firstNameModel"
+                                               required>
+                                        <div class="invalid-feedback">
+                                            Имя - обязательное поле.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control" id="lastName"
+                                               placeholder="Ваша фамилия *" ng-model="lastNameModel" required>
+                                        <div class="invalid-feedback">
+                                            Фамилия - обязательное поле.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control" id="organizationName"
+                                               ng-model="organizationNameModel"
+                                               placeholder="Название организации" value="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <input type="tel" class="form-control" id="telephoneNumber"
+                                               placeholder="Телефон *" ng-model="telephoneNumberModel"
+                                               value="" required>
+                                        <div class="invalid-feedback">
+                                            Телефон - обязательное поле.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" onfocus="(this.type='date')" class="form-control"
+                                               id="dateConnect" ng-model="dateConnectModel"
+                                               placeholder="Удобное время для связи" value=""
+                                        >
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <input type="email" class="form-control" id="email"
+                                               placeholder="Укажите Email *"
+                                               ng-model="emailModel" required>
+                                        <div class="invalid-feedback">
+                                            Email - обязательное поле.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-8 mh-100">
+                                    <textarea type="text" class="form-control" id="message"
+                                              placeholder="Сообщение" ng-model="messageModel">
+                                    </textarea>
+                                </div>
+
+                                <hr class="mb-4 bg-dark">
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <fieldset data-ng-repeat="field in organizationSet.organizations track by $index">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-5 mb-3">
+                                                        <input type="text" ng-model="organizationSet.organizations1[$index]"
+                                                               class="form-control" id="organization1"
+                                                               placeholder="Наименование объекта *" required>
+                                                        <div class="invalid-feedback">
+                                                            Наименование объекта - обязательное поле.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-5 mb-3">
+                                                        <input type="text" ng-model="organizationSet.organizations2[$index]"
+                                                               class="form-control" id="organization2"
+                                                               placeholder="Адрес объекта *" required>
+                                                        <div class="invalid-feedback">
+                                                            Адрес объекта - обязательное поле.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 mb-3">
+                                                        <button type="button" class="btn btn-danger"
+                                                                ng-click="removeOrganization($index)"
+                                                                ng-hide="organizationSet.organizations.length === 1">
+                                                            <span class="glyphicon glyphicon-minus"></span> Удалить
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </fieldset>
+
+                                        <input type="button" class="btn btn-success"
+                                               ng-click="addNewOrganization($index)"
+                                               value="Добавить ещё 1 объект">
+
+                                    </div>
+                                    <div class="col-sm-12">
+
+                                        <hr class="mb-4 bg-dark">
+
+                                        <button class="btn btn-info btn-lg btn-block"
+                                                ng-click="checkForm()"
+                                                type="submit">Отправить
+                                            заявку
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Заявка</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ваша заявка успешно отправлена
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+header {
+  .navbar {
+    //background-color: #333333 !important;
+    background-color: #1b1b1b !important;
+    padding: 0 15px;
+
+    .navbar-brand1 {
+      //font-family: 'Old School United Stencil Stencil Bold', 'Old School United Stencil Stencil', 'Old School United Stencil';
+      font-weight: 700;
+      font-style: normal;
+      font-size: 48px;
+      color: #e35e00;
+      font-family: serif;
+      margin-left: 25px;
+      //font-size: 2em;
+    }
+
+    .dropdown {
+      padding-right: 40px;
+      font-size: 18px;
+    }
+
+  }
+
+  .navbar-left {
+    margin: 7px 12px;
+    color: white;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      font-size: 13px;
+    }
+
+    .icon-menu {
+      margin-right: 7px;
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+
+  &:hover {
+    color: #ffba0f !important;
+  }
+
+  &:focus {
+    color: #ffba0f !important;
+  }
+}
+
+.nav-active {
+  color: #ffba0f !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(227,94,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler {
+  border-color: rgb(277,94,0) !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
+
+.show>.nav-link{
+  color: #ffba0f !important;
+}

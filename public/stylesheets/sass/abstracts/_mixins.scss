@@ -1,0 +1,20 @@
+@mixin size($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin d-icon($size, $bc, $bch, $cursor) {
+  @include size($size);
+  cursor: $cursor;
+  background: url($bc);
+
+  &:hover {
+    background: url($bch);
+  }
+}
+
+@mixin div-centr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

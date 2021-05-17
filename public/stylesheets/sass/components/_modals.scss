@@ -1,0 +1,37 @@
+#nsiModal {
+  .editValNsi {
+    border: 1px solid #43464a;
+    border-radius: 6px;
+    padding: 0 0;
+    margin: 0 0 7px;
+  }
+
+  .valsNsi {
+    max-height: 363px;
+    overflow: auto;
+  }
+
+  .imgBtn:hover {
+    cursor: pointer;
+  }
+
+  .formAddValNal {
+    display: flex;
+
+    & > input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .checkEditNsi, .errorEditNsi {
+    display: none;
+  }
+}
+
+.datepickers-container {
+  z-index: 3000;
+}
+
+
+

@@ -1,0 +1,64 @@
+.menu-left {
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #000000;
+  opacity: 0.9;
+  color: #ffffff;
+  height: 100%;
+  top: 0;
+  left: -200px;
+  transition: left .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+
+  &.show {
+    left: 0;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-close {
+      @include div-centr;
+
+      .icon-menu-close {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-inner {
+    margin-top: 20px;
+
+    hr {
+      background-color: rgba(150, 147, 147, 0.3);
+    }
+
+    a {
+      margin-top: 5px;
+      color: #b7bcc1;
+      text-decoration: none;
+
+      &:hover {
+        color: #034180;
+      }
+    }
+
+    .closeDeviceLink, .closeDeviceLink:hover {
+      margin-top: 30px;
+      color: red;
+    }
+
+    .nav-active, .nav-active:hover {
+      color: #00abff;
+    }
+  }
+}

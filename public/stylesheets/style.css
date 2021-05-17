@@ -1,0 +1,198 @@
+html,
+body {
+  margin: 0;
+  height: 100vh; }
+
+body {
+  min-width: 780px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ecf0f1; }
+
+.btn:focus, .btn:active,
+input:focus,
+input:active,
+select:focus,
+select:active {
+  outline: none !important;
+  box-shadow: none !important; }
+
+a {
+  cursor: pointer; }
+
+.red {
+  color: red; }
+
+.green {
+  color: green; }
+
+.form {
+  background-image: url("../../images/bg.png");
+  background-position: left top;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: 62px 107px;
+  left: auto;
+  text-align: left;
+  padding-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 -20px;
+  width: 100%;
+  height: 140%;
+  top: 0;
+  z-index: 2; }
+  .form .modalForm {
+    flex: auto; }
+  .form .branding h2 {
+    font-family: monospace;
+    font-weight: bolder; }
+  .form .forgot-password {
+    color: #007bff;
+    text-decoration: underline; }
+  .form .modal-title {
+    font-size: 28px; }
+  .form .modal-header {
+    text-align: center !important; }
+  .form .form-control-sm {
+    height: calc(1.5em + .5rem + 15px); }
+  .form .card-footer {
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 0;
+    margin-bottom: 10px; }
+    .form .card-footer .text {
+      color: #212529; }
+    .form .card-footer .textLabel, .form .card-footer .text {
+      font-family: monospace;
+      font-weight: bolder; }
+  .form .modal-dialog {
+    max-width: 800px; }
+
+.forgot img {
+  width: 178px;
+  height: 184px; }
+
+.forgot b {
+  font-size: 20px; }
+
+.forgot .forgot-text {
+  font-size: 14px;
+  text-align: center; }
+
+header .navbar {
+  background-color: #1b1b1b !important;
+  padding: 0 15px; }
+  header .navbar .navbar-brand1 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    color: #e35e00;
+    font-family: serif;
+    margin-left: 25px; }
+  header .navbar .dropdown {
+    padding-right: 40px;
+    font-size: 18px; }
+
+header .navbar-left {
+  margin: 7px 12px;
+  color: white;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header .navbar-left-item {
+    font-size: 13px; }
+  header .navbar-left .icon-menu {
+    margin-right: 7px;
+    cursor: pointer; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white; }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffba0f !important; }
+  .navbar-light .navbar-nav .nav-link:focus {
+    color: #ffba0f !important; }
+
+.nav-active {
+  color: #ffba0f !important; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(227,94,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
+
+.navbar-toggler {
+  border-color: #ff5e00 !important;
+  outline: 0 !important;
+  outline-offset: 0 !important; }
+
+.show > .nav-link {
+  color: #ffba0f !important; }
+
+.main {
+  height: calc(100vh - 211px);
+  margin: 20px; }
+
+.scrollFortTable {
+  max-height: 76vh;
+  overflow-y: scroll; }
+
+.scrollFortTableAudit {
+  max-height: 70vh;
+  overflow-y: scroll; }
+
+.container {
+  max-width: 960px; }
+
+.lh-condensed {
+  line-height: 1.25; }
+
+.guide-tools {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px; }
+  .guide-tools .tools-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 130px;
+    padding-bottom: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+    font-weight: 500; }
+    .guide-tools .tools-item:hover {
+      background-color: rgba(0, 0, 0, 0.075);
+      cursor: pointer; }
+    .guide-tools .tools-item:active {
+      background-color: #c4c4c4; }
+    .guide-tools .tools-item p {
+      margin: 0; }
+
+#nsiModal .editValNsi {
+  border: 1px solid #43464a;
+  border-radius: 6px;
+  padding: 0 0;
+  margin: 0 0 7px; }
+
+#nsiModal .valsNsi {
+  max-height: 363px;
+  overflow: auto; }
+
+#nsiModal .imgBtn:hover {
+  cursor: pointer; }
+
+#nsiModal .formAddValNal {
+  display: flex; }
+  #nsiModal .formAddValNal > input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+
+#nsiModal .checkEditNsi, #nsiModal .errorEditNsi {
+  display: none; }
+
+.datepickers-container {
+  z-index: 3000; }

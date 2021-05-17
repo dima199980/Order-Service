@@ -1,0 +1,28 @@
+.td-oper {
+  .la-ellipsis-h:before {
+    content: "•••";
+  }
+
+  .show > .btn.btn-clean, .btn.btn-clean.active, .btn.btn-clean:active, .btn.btn-clean:hover {
+    color: #0b112c!important;
+    background: #d9dae0!important;
+  }
+
+  .dropdown-toggle::after { margin:0; border: none; }
+
+  .btn-icon {
+    color: #9f9f9f!important;
+    font-size: 0.8rem!important;
+    padding: 0 3px 0 5px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    box-shadow: 0 0 50px 0 rgba(82, 63, 105, 0.15);
+    border: none;
+
+    a:hover {
+      color: #000000;
+    }
+  }
+}

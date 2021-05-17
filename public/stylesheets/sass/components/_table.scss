@@ -1,0 +1,135 @@
+table {
+  margin-top: 1rem!important;
+  border: 1px solid #c4c4c4!important;
+
+  //.table-fixed {
+  //  width: 100%;
+  //  background-color: #f3f3f3;
+  //
+  //  tbody {
+  //    height: 200px;
+  //    overflow-y: auto;
+  //    width: 100%;
+  //  }
+  //
+  //  thead, tbody, tr, td, th {
+  //    display: block;
+  //  }
+  //
+  //  tbody {
+  //    td {
+  //      float: left;
+  //    }
+  //  }
+  //
+  //  thead {
+  //    tr {
+  //      th {
+  //        float: left;
+  //        background-color: #f39c12;
+  //        border-color: #e67e22;
+  //      }
+  //    }
+  //  }
+  //}
+
+  thead {
+    background-color: #f5f5f5!important;
+
+    th {
+      position: sticky;
+      top: 0;
+      color: white;
+      background-color: #1b1b1b!important;
+      border-top: 1px solid #c4c4c4!important;
+      border-bottom: 1px solid #c4c4c4!important;
+      vertical-align: middle!important;
+      border-left: 1px solid #c4c4c4;
+    }
+
+    .th {
+      &-settings {
+        width: 39px;
+      }
+
+      &-check {
+        width: 24px;
+      }
+    }
+  }
+
+  tbody {
+    background-color: #fcfdfd!important;
+
+    td {
+      border-top: 1px solid #c4c4c4!important;
+      vertical-align: middle!important;
+    }
+
+    .td {
+      &-check {
+        border-right: 1px solid #c4c4c4;
+      }
+
+      &-oper {
+        border-left: 1px solid #c4c4c4;
+      }
+    }
+  }
+}
+
+.greenrow {
+  background-color: lightgreen !important;
+}
+
+.sortorder:after {
+  content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+  content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
+
+.tableLicWidth {
+  width: 100vh;
+}
+
+.modalContentAddOrdWidth {
+  width: calc(100vh - 250px);
+}
+
+.modalBodyAddOrdWidth {
+  width: 100vh;
+}
+
+
+
+//.table-fixed {
+//  width: 100%;
+//  background-color: #f3f3f3;
+//
+//  tbody {
+//    height: 200px;
+//    overflow-y: auto;
+//    width: 100%;
+//  }
+//
+//  thead, tbody, tr, td, th {
+//    display: block;
+//  }
+//
+//  tbody {
+//    td {
+//      float: left;
+//    }
+//  }
+//
+//  thead {
+//    tr {
+//      th {
+//        float: left;
+//        background-color: #f39c12;
+//        border-color: #e67e22;
+//      }
+//    }
+//  }
+//}

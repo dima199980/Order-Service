@@ -1,0 +1,48 @@
+.d-icon {
+  @include div-centr;
+
+  &-filter {
+    @include d-icon(32px, '../../images/filter32grey.png', '../../images/filter32.png', pointer);
+  }
+
+  &-clear {
+    @include d-icon(32px, '../../images/clear32grey.png', '../../images/clear32.png', pointer);
+  }
+
+  &-add {
+    @include d-icon(32px, '../../images/add32grey.png', '../../images/add32.png', pointer);
+  }
+
+  &-refresh {
+    @include d-icon(32px, '../../images/refresh32grey.png', '../../images/refresh32.png', pointer);
+  }
+
+
+  &-info {
+    @include d-icon(32px, '../../images/info32grey.png', '../../images/info32.png', default);
+  }
+
+  &-import {
+    @include d-icon(32px, '../../images/import32grey.png', '../../images/import32.png', pointer);
+  }
+
+  &-export {
+    @include d-icon(32px, '../../images/export32grey.png', '../../images/export32.png', pointer);
+  }
+
+  &-importInFiles {
+    @include d-icon(32px, '../../images/importInFiles32grey.png', '../../images/importInFiles32.png', pointer);
+  }
+
+  &-delete {
+    @include d-icon(32px, '../../images/delete32grey.png', '../../images/delete32.png', pointer);
+  }
+
+  &-edit {
+    @include d-icon(32px, '../../images/edit32grey.png', '../../images/edit32.png', pointer);
+  }
+
+  &-view {
+    @include d-icon(32px, '../../images/view32grey.png', '../../images/view32.png', pointer);
+  }
+}

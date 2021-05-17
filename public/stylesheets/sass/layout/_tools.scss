@@ -1,0 +1,30 @@
+.guide-tools {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+
+  .tools-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 130px;
+    padding-bottom: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 13px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: rgba(0,0,0,.075);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #c4c4c4;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
