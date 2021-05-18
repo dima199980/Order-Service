@@ -14,7 +14,7 @@ function formCtrl($rootScope, $scope, $location, $http) {
     $scope.emailModel = null;
     $scope.messageModel = null;
 
-    $scope.organizationSet = {organizations: []};
+    $scope.organizationSet = {organizations: [], organizations1: [], organizations2: []};
     $scope.organizationSet.organizations = [];
     $scope.organizationSet.organizations.push('');
 
@@ -55,5 +55,7 @@ function formCtrl($rootScope, $scope, $location, $http) {
 
     $scope.removeOrganization = function (z) {
         $scope.organizationSet.organizations.splice(z, 1);
+        $scope.organizationSet.organizations1.splice(z, 1);
+        $scope.organizationSet.organizations2.splice(z, 1);
     };
 }
